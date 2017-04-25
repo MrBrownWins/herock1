@@ -6,33 +6,32 @@
              class="page-common-background"></div>
         <div class="page-rigsiter-wrapper">
             <div class="page-rigsiter">
-                <form action="{% url "register" %}" method="post">
+                <form action="{% url "register" %}" method="post" enctype="multipart/form-data">
                     {% csrf_token %}
                     <h3> REGISTER NOW!</h3>
 
                     <div class="name">
                         <p>NAME</p>
-                        <input type="text" name="first_name" placeholder="First">
-                        <input type="text" name="last_name" placeholder="Last">
+                        <input type="text" name="first_name" placeholder="First" required>
+                        <input type="text" name="last_name" placeholder="Last" required>
                     </div>
-{#                    <p>IMAGE</p>#}
-{#                    <input type="file" name="image" accept=".jpg, .jpeg, .png" value="image"/>#}
+                    <p>IMAGE</p>
+                    <input type="file" name="image" accept=".jpg, .jpeg, .png" value="image"/>
                     <p>HOME ADDRESS</p>
                     <input type="text" name="home_address"
-                           placeholder="ex: 12, M. Ulugbek, Tashkent, Tashkent, Uzbekistan">
+                           placeholder="ex: 12, M. Ulugbek, Tashkent, Tashkent, Uzbekistan" required>
                     <p>BIRTH DATE</p>
-                    <input type="text" name="birth_date" placeholder="ex: 1992-12-12"/>
+                    <input type="text" name="date" class="date" onkeydown="return false" placeholder="ex: 15/03/1992" required/>
                     <p>PHONE NUMBER</p>
-                    <input type="text" name="phone_number" placeholder="ex: +998911234567"/>
+                    <input type="tel" name="phone_number" placeholder="ex: +998971234567" pattern="\+998[0-9]{9}"  required/>
                     <p>ENTER YOUR EMAIL ADDRESS</p>
-                    <input type="email" name="email1" placeholder="ex: somebody@host.domain">
+                    <input type="email" name="email1" placeholder="ex: email@gmail.com" required>
                     <p>CREATE YOUR USERNAME</p>
                     <input type="text" name="username" required="required">
                     <p>CREATE YOUR PASSWORD</p>
-                    <input id="pw1" type="password" name="password" required="required" placeholder="****************">
+                    <input id="pw1" type="password" name="password" required="required">
                     <p>CONFIRM YOUR PASSWORD</p>
-                    <input id="pw2" type="password" name="confirm_password" onchange="checkpwd()"
-                           placeholder="****************">
+                    <input id="pw2" type="password" name="confirm_password" onchange="checkpwd()">
                     <div class="button"><input class="normal-btn normal-btn-main btn-size-5" value="CREATE ACCOUNT"
                                                type="submit"/>
                     </div>

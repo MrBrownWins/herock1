@@ -1078,7 +1078,8 @@ textarea {
   font-size: 12px;
   line-height: 16px;
   outline: none;
-  padding: 13px;
+  padding: 8px;
+  margin-bottom: 3px;
   -webkit-transition: all 0.4s ease-in-out;
           transition: all 0.4s ease-in-out;
   font-family: 'Raleway', sans-serif;
@@ -9269,11 +9270,20 @@ section.portfolio-section .isotope-container .remove-col-padding {
   letter-spacing: 0.05em;
   display: inline-block;
 }
+.btn-reply{
+  color: #9c5b57;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.05em;
+  background-color: transparent;
+  text-shadow: none !important;
+  border-color: transparent;
+}
 .post-comments-style .content .like-reply .like {
   line-height: 1;
-  padding-right: 30px;
-  border-right: 1px solid #dddddd;
-  margin-right: 20px;
+  padding-right: 0 !important;
+  border-right: none !important;
+  margin-right: 0 !important;
   font-weight: 500;
   font-family: 'Montserrat', sans-serif;
   letter-spacing: 0.05em;
@@ -9317,7 +9327,7 @@ section.portfolio-section .isotope-container .remove-col-padding {
   margin-left: 130px;
 }
 .post-comments-form .widget.contact-us .normal-btn.btn-size-5 {
-  padding: 15px 60px;
+  padding: 8px 60px;
 }
 @media (max-width: 767px ) {
   .post-comments-form .image {

@@ -1,6 +1,8 @@
 from django.contrib.auth.models import User
 from django.db import models
 
+from healtech2 import settings
+
 
 class JobType(models.Model):
     title = models.CharField(max_length=255)
@@ -58,8 +60,8 @@ class Patient(models.Model):
     user = models.OneToOneField(User, related_name='patient_user')
     image = models.FileField(upload_to='patients/image', help_text="select images like *.jpg, *.png", blank=True)
     address = models.CharField(max_length=1024, default="home, Street, City, District, Country")
-    phone_number = models.CharField(max_length=13, help_text="ex: +998914741369", blank=True)
-    birth_date = models.DateField(auto_now=False, blank=True)
+    phone_number = models.CharField(max_length=13, help_text="ex: +998971234567", blank=True)
+    birth_date = models.DateField(auto_now=False, blank=True, unique_for_date=settings.DATE_INPUT_FORMATS)
     about_illness = models.TextField(max_length=1024, blank=True)
     registered = models.DateTimeField(auto_now_add=True, auto_now=False)
     updated = models.DateTimeField(auto_now=True)

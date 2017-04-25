@@ -75,9 +75,12 @@
                                                 </div>
                                                 <form action="{% url "comment" id=post.pk %}" method="post">
                                                     {% csrf_token %}
-                                                    <input type="text" name="description_comment" placeholder="comment">
-                                                    <input class="reply" type="submit" name="comment_btn" value="Reply">
+                                                    <input type="text" name="description_comment"
+                                                           placeholder="comment">
+                                                    <input class="btn-reply" type="submit" name="comment_btn"
+                                                           value="Reply">
                                                 </form>
+
                                             </div>
                                             {#                                            {% Patient.objects.get(id=post.created_by.id).image.url%}#}
 
