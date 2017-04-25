@@ -1,3 +1,1 @@
-web: gunicorn HealForum.wsgi --log-file -
-web: gunicorn HealTech.wsgi --log-file -
-web: gunicorn HealUsers.wsgi --log-file -
+web: gunicorn healtech2.wsgi --log-file -
